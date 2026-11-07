@@ -19,21 +19,22 @@
       justify-content: center;
       align-items: center;
       text-align: center;
-      background: radial-gradient(ellipse at center, #1a0a1a 0%, #000 70%);
+      background: #000;
       position: relative;
       overflow: hidden;
     }
     .hero::before {
       content: "";
       position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at 30% 40%, rgba(255,0,100,0.08), transparent 50%),
-                  radial-gradient(circle at 70% 60%, rgba(0,200,255,0.06), transparent 50%);
-      animation: pulse 12s ease-in-out infinite alternate;
+      inset: -20%;
+      background: radial-gradient(ellipse at 40% 50%, rgba(255, 0, 120, 0.18) 0%, transparent 55%),
+                  radial-gradient(ellipse at 65% 55%, rgba(0, 180, 255, 0.14) 0%, transparent 50%);
+      animation: breathe 8s ease-in-out infinite;
+      filter: blur(40px);
     }
-    @keyframes pulse {
-      from { opacity: 0.6; }
-      to { opacity: 1; }
+    @keyframes breathe {
+      0%, 100% { transform: scale(1); opacity: 0.6; }
+      50% { transform: scale(1.15); opacity: 1; }
     }
     .hero h1 {
       font-size: clamp(2.8rem, 9vw, 7rem);
@@ -42,6 +43,11 @@
       text-transform: uppercase;
       position: relative;
       z-index: 1;
+      animation: glow 6s ease-in-out infinite;
+    }
+    @keyframes glow {
+      0%, 100% { text-shadow: 0 0 20px rgba(255,255,255,0.15); }
+      50% { text-shadow: 0 0 40px rgba(255,100,180,0.35), 0 0 80px rgba(0,180,255,0.2); }
     }
     .hero p { opacity: 0.6; margin-top: 1rem; font-size: 1.15rem; position: relative; z-index: 1; }
     section {
@@ -94,77 +100,14 @@
       letter-spacing: 0.04em;
       color: #fff;
     }
-    footer {
+    .loops {
+      background: #0a0a0a;
+      border: 1px solid #222;
+      padding: 2rem 1.8rem;
       text-align: center;
-      padding: 5rem 1rem;
-      opacity: 0.4;
-      font-size: 0.85rem;
     }
-    a { color: #ccc; }
-  </style>
-</head>
-<body>
-
-  <div class="hero">
-    <h1>LichtAnLichtAus</h1>
-    <p>VJ · Mapping · Frankfurt</p>
-  </div>
-
-  <section>
-    <h2>Selected</h2>
-    <div class="grid">
-      <div class="card">
-        <iframe src="https://www.youtube.com/embed/DEINE_VIDEO_ID" allowfullscreen></iframe>
-        <p>Ciuri · Neon On/Off</p>
-      </div>
-      <div class="card">
-        <iframe src="https://www.youtube.com/embed/DEINE_VIDEO_ID" allowfullscreen></iframe>
-        <p>Gibson · Mapping</p>
-      </div>
-      <div class="card">
-        <iframe src="https://drive.google.com/file/d/DEINE_DRIVE_ID/preview" allowfullscreen></iframe>
-        <p>Atelier Frankfurt</p>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <h2>Mapping Setups</h2>
-
-    <div class="setup">
-      <strong>Club / LED-Wand</strong>
-      <p>VDMX auf MacBook → LED-Prozessor oder direkte HDMI-Ausgabe.<br>
-      Typisch 1920×1080 oder 3840×1080 (ultra-wide). Beat-reaktive Layer + Masken.</p>
-    </div>
-
-    <div class="setup">
-      <strong>Projektor-Mapping (schwarzer Raum)</strong>
-      <p>1–2 Laser/DLP-Projektoren, Edge-Blending wenn nötig.<br>
-      Blender-Previs → VDMX oder Resolume. Fokus auf Illusion & Tiefe.</p>
-    </div>
-
-    <div class="setup">
-      <strong>Hybrid / Live</strong>
-      <p>VDMX + Touch OSC / MIDI für Presets und Layer-Switching.<br>
-      Audio-Visualizer + manuelle Overrides. Gerüst- oder Objekt-Mapping on the fly.</p>
-    </div>
-
-  </section>
-
-  <section>
-    <h2>About</h2>
-    <p style="max-width: 620px; opacity: 0.75;">
-      Eric & Sascha. Videomapping und Live-Visuals seit 2010.<br>
-      Schwarze Räume, Illusionen, beat-reaktive Loops.<br>
-      Frankfurt · Bahnhofsviertel.
-    </p>
-  </section>
-
-  <footer>
-    <a href="mailto:deine@mail.de">Kontakt</a> · 
-    <a href="https://x.com/MrAKabuki">X</a> · 
-    Tip the Artist
-  </footer>
-
-</body>
-</html>
+    .loops a {
+      display: inline-block;
+      margin-top: 1.2rem;
+      padding: 0.7rem 1.6rem;
+      border:
