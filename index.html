@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LichtAnLichtAus – VJ & Mapping</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #000;
+      color: #eee;
+      font-family: system-ui, -apple-system, sans-serif;
+      line-height: 1.45;
+    }
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: radial-gradient(ellipse at center, #111 0%, #000 70%);
+    }
+    .hero h1 {
+      font-size: clamp(2.5rem, 8vw, 6rem);
+      letter-spacing: 0.15em;
+      font-weight: 300;
+      text-transform: uppercase;
+    }
+    .hero p { opacity: 0.6; margin-top: 1rem; font-size: 1.1rem; }
+    section {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 8vh 1.5rem;
+    }
+    h2 {
+      font-size: 1.3rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+      font-weight: 400;
+      opacity: 0.8;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background: #0a0a0a;
+      border: 1px solid #222;
+      overflow: hidden;
+    }
+    .card iframe {
+      width: 100%;
+      aspect-ratio: 16/9;
+      border: none;
+      display: block;
+    }
+    .card p, .setup p {
+      padding: 0.8rem 1rem;
+      font-size: 0.9rem;
+      opacity: 0.75;
+    }
+    .setup {
+      background: #0a0a0a;
+      border: 1px solid #222;
+      padding: 1.2rem 1.4rem;
+      margin-bottom: 1rem;
+    }
+    .setup strong {
+      display: block;
+      margin-bottom: 0.4rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+    }
+    footer {
+      text-align: center;
+      padding: 4rem 1rem;
+      opacity: 0.4;
+      font-size: 0.85rem;
+    }
+    a { color: #ccc; }
+  </style>
+</head>
+<body>
+
+  <div class="hero">
+    <h1>LichtAnLichtAus</h1>
+    <p>VJ · Mapping · Frankfurt</p>
+  </div>
+
+  <section>
+    <h2>Selected</h2>
+    <div class="grid">
+      <div class="card">
+        <iframe src="https://www.youtube.com/embed/DEINE_VIDEO_ID" allowfullscreen></iframe>
+        <p>Ciuri · Neon On/Off</p>
+      </div>
+      <div class="card">
+        <iframe src="https://www.youtube.com/embed/DEINE_VIDEO_ID" allowfullscreen></iframe>
+        <p>Gibson · Mapping</p>
+      </div>
+      <div class="card">
+        <iframe src="https://www.youtube.com/embed/DEINE_VIDEO_ID" allowfullscreen></iframe>
+        <p>Atelier Frankfurt</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Mapping Setups</h2>
+
+    <div class="setup">
+      <strong>Club / LED-Wand</strong>
+      <p>VDMX auf MacBook → LED-Prozessor oder direkte HDMI-Ausgabe.<br>
+      Typisch 1920×1080 oder 3840×1080 (ultra-wide). Beat-reaktive Layer + Masken.</p>
+    </div>
+
+    <div class="setup">
+      <strong>Projektor-Mapping (schwarzer Raum)</strong>
+      <p>1–2 Laser/DLP-Projektoren (z. B. Christie / Acer), Edge-Blending wenn nötig.<br>
+      Blender-Previs → VDMX oder Resolume. Fokus auf Illusion & Tiefe.</p>
+    </div>
+
+    <div class="setup">
+      <strong>Hybrid / Live</strong>
+      <p>VDMX + Touch OSC / MIDI für Presets und Layer-Switching.<br>
+      Audio-Visualizer + manuelle Overrides. Gerüst- oder Objekt-Mapping on the fly.</p>
+    </div>
+
+  </section>
+
+  <section>
+    <h2>About</h2>
+    <p style="max-width: 600px; opacity: 0.75;">
+      Eric & Sascha. Videomapping und Live-Visuals seit 2010.<br>
+      Schwarze Räume, Illusionen, beat-reaktive Loops.<br>
+      Frankfurt · Bahnhofsviertel.
+    </p>
+  </section>
+
+  <footer>
+    <a href="mailto:deine@mail.de">Kontakt</a> · 
+    <a href="https://x.com/MrAKabuki">X</a> · 
+    Tip the Artist
+  </footer>
+
+</body>
+</html>
